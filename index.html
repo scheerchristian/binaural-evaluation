@@ -29,11 +29,92 @@
     <hr>
     <div id='section-1' class='section'>
         <h2>Look-Up Table</h2>
-        <p>
-            Summarizing table showing the combination of microphone array and rendering approach.
-        </p>
-        <img src="img/LookUp_Table.PNG" alt="Look-Up Table">
+        <table style="border-collapse: collapse; width: 100%;">
+            <caption style="text-align: center">Summarizing table showing the combination of microphone <br> array and rendering approach.</caption>
 
+            <thead>
+                <tr style="border-bottom: double 3px black;">
+                    <th style="padding: 3px; text-align: left;">Microphone Array</th>
+                    <th style="padding: 3px; text-align: left;">Encoding</th>
+                    <th style="padding: 3px; text-align: left;">Decoding</th>
+                    <th style="padding: 3px; text-align: left;">Abbreviation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 3px;">EMA8</td>
+                    <td style="padding: 3px;"></td>
+                    <td style="padding: 3px;">MTB</td>
+                    <td style="padding: 3px;">MTB8</td>
+                </tr>
+                <tr style="border-bottom: solid 1px black;">
+                    <td style="padding: 3px;">EMA16</td>
+                    <td style="padding: 3px;"></td>
+                    <td style="padding: 3px;">MTB</td>
+                    <td style="padding: 3px;">MTB16</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3px;">EMA8</td>
+                    <td style="padding: 3px;">EMA N=4</td>
+                    <td style="padding: 3px;">MagLS N=4</td>
+                    <td style="padding: 3px;">EMA N3</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3px;">EMA16</td>
+                    <td style="padding: 3px;">EMA N=7</td>
+                    <td style="padding: 3px;">MagLS N=7</td>
+                    <td style="padding: 3px;">EMA N7</td>
+                </tr>
+                <tr style="border-bottom: solid 1px black;">
+                    <td style="padding: 3px;">SMA1 - Sennheiser Ambeo</td>
+                    <td style="padding: 3px;">Ambi N=1</td>
+                    <td style="padding: 3px;">MagLS N=1</td>
+                    <td style="padding: 3px;">SMA N3</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3px;">SMA2 - Zylia ZM-1</td>
+                    <td style="padding: 3px;">Ambi N=3</td>
+                    <td style="padding: 3px;">MagLS N=3</td>
+                    <td style="padding: 3px;">SMA N3</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3px;">SMA3 - mhacoustics Eigenmike32</td>
+                    <td style="padding: 3px;">Ambi N=4</td>
+                    <td style="padding: 3px;">MagLS N=4</td>
+                    <td style="padding: 3px;">SMA N4</td>
+                </tr>
+                <tr style="border-bottom: solid 1px black;">
+                    <td style="padding: 3px;">SMA4 - Hosma7N MKII</td>
+                    <td style="padding: 3px;">Ambi N=7</td>
+                    <td style="padding: 3px;">MagLS N=7</td>
+                    <td style="padding: 3px;">SMA N7</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3px;">SMA1 - Sennheiser Ambeo</td>
+                    <td style="padding: 3px;">Ambi N=1</td>
+                    <td style="padding: 3px;">COMPASS</td>
+                    <td style="padding: 3px;">SMA N3 C</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3px;">SMA2 - Zylia ZM-1</td>
+                    <td style="padding: 3px;">Ambi N=3</td>
+                    <td style="padding: 3px;">COMPASS</td>
+                    <td style="padding: 3px;">SMA N3 C</td>
+                </tr>
+                <tr>
+                    <td style="padding: 3px;">SMA3 - mhacoustics Eigenmike32</td>
+                    <td style="padding: 3px;">Ambi N=4</td>
+                    <td style="padding: 3px;">COMPASS</td>
+                    <td style="padding: 3px;">SMA N4 C</td>
+                </tr>
+                <tr style="border-bottom: double 3px black;">
+                    <td style="padding: 3px;">SMA4 - Hosma7N MKII</td>
+                    <td style="padding: 3px;">Ambi N=7</td>
+                    <td style="padding: 3px;">COMPASS</td>
+                    <td style="padding: 3px;">SMA N7 C</td>
+                </tr>
+            </tbody>
+        </table> 
     </div>
 
 
@@ -49,7 +130,7 @@
             <p> MTB8 <div class='labeled-audio'><audio preload='metadata' controls><source src='audio/BPH_L4_MTB8 _no-eq_binaural_SSR.wav' type='audio/mpeg'></audio></div> </p>
             <p> MTB16 <div class='labeled-audio'><audio preload='metadata' controls><source src='audio/BPH_L3_MTB16_no-eq_binaural_SSR.wav' type='audio/mpeg'></audio></div> </p>
             
-            <p> EMA N3 <div class='labeled-audio'><audio preload='metadata' controls><source src='audio/BPH_L4_ambisonics_eq_binaural_MagLS_SSR.wav' type='audio/mpeg'></audio></div> </p>
+            <p> EMA N3 <div class='labeled-audio', id="ema_n3"><audio preload='metadata' controls><source src='audio/BPH_L4_ambisonics_eq_binaural_MagLS_SSR.wav' type='audio/mpeg'></audio></div> </p>
             <p> EMA N3 <div class='labeled-audio'><audio preload='metadata' controls><source src='audio/BPH_L3_ambisonics_eq_binaural_MagLS_SSR.wav' type='audio/mpeg'></audio></div> </p>
             <p> SMA N1 <div class='labeled-audio'><audio preload='metadata' controls><source src='audio/BPH_L5_ambisonics_eq_binaural_MagLS_SSR.wav' type='audio/mpeg'></audio></div> </p>
             <p> SMA N3 <div class='labeled-audio'><audio preload='metadata' controls><source src='audio/BPH_L6_ambisonics_no-eq_binaural_MagLS_SSR.wav' type='audio/mpeg'></audio></div> </p>
