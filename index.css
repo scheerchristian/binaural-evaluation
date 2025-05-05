@@ -124,40 +124,35 @@ p {
     bottom: 60px;
 }
 
-.labeled-audio {
-    text-align: center;
-    display: inline;
-    max-width: 250px;
-    min-width: 175px;
-    flex: 1 1 210px;
-    margin: 5px 10px;
-    position: relative;
-}
-
-.labeled-audio2 {
-    min-height: 135px;
-}
-
-.labeled-audio2 > audio {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-}
-
-.labeled-audio > p {
-    margin: 10px 0px 2px;
-}
-
-.playlist {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 5px;
-    margin-top: 10px;
-}
-
 .playlist-title {
     display: block;
     margin: 0px 20%;
     margin-top: 30px;
 }
 
+.playlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.labeled-audio {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.labeled-audio p {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.labeled-audio audio {
+    width: 100%;
+}
